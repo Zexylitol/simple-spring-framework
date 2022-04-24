@@ -3,6 +3,7 @@ package com.uestc.service.solo.impl;
 import com.uestc.entity.bo.HeadLine;
 import com.uestc.entity.dto.Result;
 import com.uestc.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author yzz
  * @create 2022-04-19 15:55
  */
+@Service
 public class HeadLineServiceImpl implements HeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {

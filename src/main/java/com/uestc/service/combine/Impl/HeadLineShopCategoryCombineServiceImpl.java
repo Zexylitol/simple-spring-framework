@@ -7,6 +7,8 @@ import com.uestc.entity.dto.Result;
 import com.uestc.service.combine.HeadLineShopCategoryCombineService;
 import com.uestc.service.solo.HeadLineService;
 import com.uestc.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
+import org.simpleframework.inject.annotation.Autowired;
 
 import java.util.List;
 
@@ -14,8 +16,11 @@ import java.util.List;
  * @author yzz
  * @create 2022-04-19 16:00
  */
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
+    @Autowired
     private HeadLineService headLineService;
+    @Autowired
     private ShopCategoryService shopCategoryService;
     @Override
     public Result<MainPageInfoDTO> getMainPageInfo() {

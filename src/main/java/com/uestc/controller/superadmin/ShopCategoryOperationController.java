@@ -3,6 +3,8 @@ package com.uestc.controller.superadmin;
 import com.uestc.entity.bo.ShopCategory;
 import com.uestc.entity.dto.Result;
 import com.uestc.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Controller;
+import org.simpleframework.inject.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +14,9 @@ import java.util.List;
  * @author yzz
  * @create 2022-04-19 18:58
  */
+@Controller
 public class ShopCategoryOperationController {
+    @Autowired
     private ShopCategoryService shopCategoryService;
     public Result<Boolean> addShopCategory(HttpServletRequest req, HttpServletResponse resp) {
         // TODO:参数校验以及请求参数转化
